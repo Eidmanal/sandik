@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  color: #111;
+}
+
+.sidebar .menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.sidebar .menu li {
+  margin: 10px 0;
+}
+
+.sidebar .menu a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.sidebar .menu a:hover {
+  background: #f0f0ff;
+  border-left: 3px solid #5454ff;
+  color: #000;
+}
+
+.sidebar .menu i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.main-content {
+  margin-left: 220px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.nav-wrapper {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile-pic {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-pic .icon {
+  width: 24px;
+  height: 24px;
+}
+
+#profile-pic:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.content {
+  padding: 20px;
+}
+
+.dropzone {
+    width: 100%;
+    padding: 100px;
+    border-radius: 10px;
+    border: 1px dashed rgb(144, 147, 148);
+    background-color: rgba(253, 254, 255, 0.192);
+    transition: background-color 0.3s ease-in-out;
+    cursor: default;
+    text-align: center;
+    justify-self: center;
+}
+
+
+.icon {
+    width: 34px;
+    padding-right: 10px;
+}
+
+#plus-icon {
+    width: 20px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+
+#upload-image {
+    width: 45px;
+    justify-self: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#browse-btn {
+    border-radius: 20px;
+    width: 250px;
+    height: 35px;
+    border: none;
+    background-color: #ffffff70;
+    color: rgba(0, 0, 0, 0.705);
+    transition: background-color 0.2s ease-in-out;
+    backdrop-filter: blur(1px);
+}
+
+#browse-btn:hover {
+    background-color: #e0dde66b;
+}
+
+#upload-btn {
+  border-radius: 20px;
+  width: 180px;
+  height: 32px;
+  border: none;
+  background: linear-gradient(40deg, #ff55be, #485aff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-size: 200% 200%;
+  transition: transform 0.3s ease, background-position 0.5s ease-in-out;
+}
+
+#upload-btn svg {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+#upload-btn:hover {
+  background-position: right center;
+  transform: scale(1.02);
+}
+
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers dialog */
+  z-index: 9999;
+  background-color: #ffffff56;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  display: none; /* hidden by default */
+  flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  backdrop-filter: blur(1px);
+}
+
+.dialog.active {
+  display: flex;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+  display: none;
+  
+}
+
+.dialog-overlay.active {
+  display: block;
+}
+
+#file-upload-dialog {
+    width: 500px;
+    height: 400px;
+    z-index: 1000;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-decoration {
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+}
+
+.dialog-decoration svg {
+    width: 25px;
+    height: 25px;
+    transition: color 0.2s ease;
+}
+
+.dialog-decoration svg:hover {
+    color: white;
+}
+
+.view-card {
+  opacity: 0;
+  padding: 20px;
+  transform: translateY(5px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.view-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
