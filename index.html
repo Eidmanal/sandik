@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cards.css">
     <script src="scripts/dialog.js" defer></script>
     <script src="scripts/transitions.js" defer></script>
     <title>Sandik</title>
@@ -68,6 +69,11 @@
     </div>
 
     <div class="main-content">
+        <div id="welcome-card">
+            <h5>
+                Let's get started
+            </h5>
+        </div>
         <div class="view-card" id="dashboard-view">
             <h3>Dashboard</h3>
             <p>Welcome to your dashboard overview.</p>
@@ -75,7 +81,21 @@
 
         <div class="view-card" id="files-view" style="display:none;">
             <h3>Files</h3>
-            <p>Your uploaded files will appear here.</p>
+
+            <div id="file-search-section">
+                <input type="text" placeholder="Search" id="file-search-field">
+                <button id="file-search-btn">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+
+                </button>
+            </div>
+            <div id="files-list">
+
+            </div>
         </div>
 
         <div class="view-card" id="messages-view" style="display:none;">

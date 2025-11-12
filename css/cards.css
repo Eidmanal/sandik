@@ -1,0 +1,68 @@
+#welcome-card {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#welcome-card h5{
+  font-size: 2em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff55be, #485aff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 8s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+#files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 5px;
+}
+
+#file-search-section {
+    display: flex;
+    gap: 0;
+    margin-bottom: 30px;
+}
+
+#file-search-field {
+    border-radius: 20px 0 0 20px;
+    padding-left: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+#file-search-field:hover {
+    background-color: white;
+}
+
+#file-search-btn {
+    border: 1px solid rgb(206, 206, 206);
+    background-color: transparent;
+    border-radius: 0 20px 20px 0;
+    height: 42px;
+    transition: background-color 0.3s ease;
+}
+
+#file-search-btn:hover {
+    background-color: white;
+}
+
+#files-list {
+    border: 1px solid rgb(206, 206, 206);
+    height: 60vh;
+}
