@@ -11,7 +11,9 @@
   font-weight: bold;
   background: linear-gradient(90deg, #ff55be, #485aff);
   background-size: 300%;
-  -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Chrome, Safari */
+  -webkit-text-fill-color: transparent; /* needed for the clip */
+  background-clip: text; /* standard syntax (Firefox behind flag) */
   -webkit-text-fill-color: transparent;
   animation: moveGradient 8s linear infinite;
 }
@@ -62,7 +64,45 @@
     background-color: white;
 }
 
+#file-search-field:focus,
+#file-search-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgb(206, 206, 206) !important;
+}
+
 #files-list {
     border: 1px solid rgb(206, 206, 206);
     height: 60vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+
+.file-item {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.file-item:hover {
+  background-color: #828efa75;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+  color: rgb(80, 80, 255);
+  margin-right: 5px;
+}
+
+.file-date{
+  color: rgb(143, 143, 143);
+  font-size: 9pt;
 }
