@@ -277,3 +277,15 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.switch input[type="checkbox"]:checked + .lever {
+    background-color: #2b343f !important;
+}
+
+.switch input[type="checkbox"]:checked + .lever:before {
+    background-color: #2960f867 !important;
+}
+
+.switch input[type="checkbox"]:checked + .lever:after {
+    background-color: #2961f8 !important;
+}
