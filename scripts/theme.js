@@ -1,6 +1,7 @@
 const root = document.documentElement;
 
 const themeToggle = document.getElementById("theme-toggle");
+const themeStatus = document.getElementById("themeStatus");
 
 let savedTheme = localStorage.getItem("theme");
 
@@ -13,7 +14,9 @@ themeToggle?.addEventListener("click", () => {
 
     if (root.classList.contains("dark")) {
         localStorage.setItem("theme", "dark");
+        themeStatus.innerText = "Dark";
     } else {
         localStorage.setItem("theme", "light");
+        themeStatus.innerText = "Light";
     }
 });

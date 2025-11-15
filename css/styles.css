@@ -2,36 +2,42 @@
   --body: #fafafa;
   --sidebar: #fff;
   --sidebar-border: #eee;
+  --sidebar-border-left: #5454ff;
   --sidebar-username: #111;
   --sidebar-list: #333;
   --upload-image: rgba(0, 0, 0, 0.5);
   --sidebar-hover: #f0f0ff;
   --sidebar-text-hover: #000;
-  --browse-btn-bg: #ffffff3b;
+  --browse-btn-bg: #cccccc3b;
   --browse-btn-text: rgba(0, 0, 0, 0.705);
   --upload-gradient-left: #ff55be;
   --upload-gradient-right: #485aff;
+  --upload-text: #fafafa;
   --dialog-gradient-left: #ffffffd3;
   --dialog-gradient-right: #ffffff56;
-  --browse-btn-hover: #fffffff6;
+  --browse-btn-hover: #ffffff;
+  --heading: #000;
 }
 
 .dark {
-  --body: #424350;
-  --sidebar: #2a2c35;
+  --body: #1f1f25;
+  --sidebar: #16171d;
   --sidebar-border: #1b1b1b;
+  --sidebar-border-left: #2d6fff;
   --sidebar-username: #ddd;
   --sidebar-list: #eee;
   --upload-image: rgba(0, 0, 0, 0.5);
   --sidebar-hover: #5d5d74;
-  --sidebar-text-hover: #a1d2ff;
+  --sidebar-text-hover: #dceeff;
   --browse-btn-bg: #7777773b;
   --browse-btn-text: rgba(219, 219, 219, 0.705);
   --upload-gradient-left: #a51bdb;
   --upload-gradient-right: #7da6ff;
+  --upload-text: #fafafa;
   --dialog-gradient-left: #413939d3;
   --dialog-gradient-right: #22255356;
   --browse-btn-hover: #111111f6;
+  --heading: #ebebeb;
 }
 
 body {
@@ -39,6 +45,11 @@ body {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--body);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--heading);
+  font-weight: 100;
 }
 
 .sidebar {
@@ -85,7 +96,7 @@ body {
 
 .sidebar .menu a:hover {
   background: var(--sidebar-hover);
-  border-left: 3px solid #5454ff;
+  border-left: 3px solid var(--sidebar-border-left);
   color: var(--sidebar-text-hover);
 }
 
@@ -137,7 +148,6 @@ body {
     justify-self: center;
 }
 
-
 .icon {
     width: 34px;
     padding-right: 10px;
@@ -176,7 +186,7 @@ body {
   height: 32px;
   border: none;
   background: linear-gradient(40deg, var(--upload-gradient-left), var(--upload-gradient-right));
-  color: var(--sidebar);
+  color: var(--upload-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -279,7 +289,7 @@ body {
 }
 
 .switch input[type="checkbox"]:checked + .lever {
-    background-color: #2b343f !important;
+    background-color: #293444 !important;
 }
 
 .switch input[type="checkbox"]:checked + .lever:before {
