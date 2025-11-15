@@ -36,34 +36,46 @@
 
 #file-search-section {
     display: flex;
-    gap: 0;
-    margin-bottom: 30px;
     height: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #file-search-field {
+    height: 100% !important;
+    line-height: 40px !important;
+    padding: 0 12px !important;
     border-radius: 20px 0 0 20px;
-    padding-left: 10px;
-    border: 1px solid rgb(206, 206, 206);
-    height: 100%;
-    transition: background-color 0.3s ease;
-}
-
-#file-search-field:hover {
-    background-color: white;
+    border: 1px solid rgb(206, 206, 206) !important;
+    box-sizing: border-box;
+    margin: 0 !important;
 }
 
 #file-search-btn {
-    border: 1px solid rgb(206, 206, 206);
-    background-color: transparent;
+    height: 100% !important;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0 20px 20px 0;
-    height: 100%;
-    transition: background-color 0.3s ease;
+    border: 1px solid rgb(206, 206, 206);
+    border-left: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+#file-search-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+#file-search-field:hover,
 #file-search-btn:hover {
     background-color: white;
 }
+
 
 #file-search-field:focus,
 #file-search-btn:focus {
