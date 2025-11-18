@@ -1,3 +1,21 @@
+:root {
+  --filename: black;
+  --file-date: rgb(143, 143, 143);
+  --outline: rgb(206, 206, 206);
+  --file-icon-outline: rgb(80, 80, 255);
+  --search-hover: rgb(242, 248, 255);
+  --search-icon-outline: black;
+}
+
+.dark {
+  --filename: rgb(223, 223, 223);
+  --file-date: rgb(153, 153, 153);
+  --outline: rgb(58, 58, 73);
+  --file-icon-outline: rgb(80, 127, 255);
+  --search-hover: rgb(40, 41, 59);
+  --search-icon-outline: white;
+}
+
 #welcome-card {
     display: flex;
     text-align: center;
@@ -32,6 +50,7 @@
     flex-direction: column;
     gap: 2px;
     border-radius: 5px;
+    border: 1px solid var(--outline);
 }
 
 #file-search-section {
@@ -46,7 +65,7 @@
     line-height: 40px !important;
     padding: 0 12px !important;
     border-radius: 20px 0 0 20px;
-    border: 1px solid rgb(206, 206, 206) !important;
+    border: 1px solid var(--outline) !important;
     box-sizing: border-box;
     margin: 0 !important;
 }
@@ -58,7 +77,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 0 20px 20px 0;
-    border: 1px solid rgb(206, 206, 206);
+    border: 1px solid var(--outline);
     border-left: none;
     background: transparent;
     cursor: pointer;
@@ -69,23 +88,23 @@
 #file-search-btn svg {
     width: 32px;
     height: 32px;
+    color: var(--search-icon-outline);
 }
 
 #file-search-field:hover,
 #file-search-btn:hover {
-    background-color: white;
+    background-color: var(--search-hover);
 }
-
 
 #file-search-field:focus,
 #file-search-btn:focus {
     outline: none !important;
     box-shadow: none !important;
-    border: 1px solid rgb(206, 206, 206) !important;
+    border: 1px solid var(--outline) !important;
 }
 
 #files-list {
-    border: 1px solid rgb(206, 206, 206);
+    border: 1px solid var(--outline);
     height: 60vh;
     padding: 5px;
     display: flex;
@@ -94,7 +113,6 @@
     align-items: center;
     overflow-y: auto;
 }
-
 
 .file-item {
   padding: 5px;
@@ -110,11 +128,15 @@
 .file-icon {
   width: 24px;
   height: 24px;
-  color: rgb(80, 80, 255);
+  color: var(--file-icon-outline);
   margin-right: 5px;
 }
 
+.filename {
+  color: var(--filename);
+}
+
 .file-date{
-  color: rgb(143, 143, 143);
+  color: var(--file-date);
   font-size: 9pt;
 }
